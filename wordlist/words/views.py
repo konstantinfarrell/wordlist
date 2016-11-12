@@ -52,3 +52,12 @@ def _edit(request, word_id):
         "form": form,
         "word_id": word_id,
     })
+
+
+def delete(request, word_id):
+    """
+    """
+    word = Word.objects.get(pk=word_id)
+    word.delete()
+    messages.success(request, "Deleted")
+    return HttpResponseRedirect(reverse('home'))
