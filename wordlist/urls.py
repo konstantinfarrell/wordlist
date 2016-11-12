@@ -1,6 +1,6 @@
 from django.conf.urls import url
 from django.contrib import admin
-from wordlist.home import views as home
+from wordlist.words import views as words
 
 
 admin.autodiscover()
@@ -8,5 +8,5 @@ admin.autodiscover()
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', home.home, name='home'),
+    url(r'^$', words.home, name='home'),
 ]
