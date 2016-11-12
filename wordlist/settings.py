@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 here = lambda *path: os.path.normpath(os.path.join(os.path.dirname(__file__), *path))
 ROOT = lambda *path: here("../", *path)
 
-SECRET_KEY = variable('SECRET_KEY', default=sha256(str(random()).encode('utf-8')).hexdigest())
+SECRET_KEY = variable('SECRET_KEY', default=os.urandom(64).decode('latin-1'))
 
 DEBUG = variable('DEBUG', default=True)
 
@@ -108,6 +108,5 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 STATIC_URL = '/static/'
