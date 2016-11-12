@@ -2,7 +2,7 @@
 {% block content %}
 
 <h1>Word List</h1>
-<table>
+<table class="table table-striped">
     <th>
         <td>ID</td>
         <td>Word</td>
@@ -15,6 +15,7 @@
     </th>
     {% for word in words %}
         <tr>
+            <td><a class="btn btn-warning btn-sm" href="{% url 'words-edit' word.pk %}"><span class="glyphicon glyphicon-pencil" /></a></td>
             <td>{{ word.pk }}</td>
             <td>{{ word.word }}</td>
             <td>{{ word.phonetic }}</td>
