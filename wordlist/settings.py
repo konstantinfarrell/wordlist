@@ -28,7 +28,7 @@ SECRET_KEY = variable('SECRET_KEY', default=sha256(str(random()).encode('utf-8')
 
 DEBUG = variable('DEBUG', default=True)
 
-ALLOWED_HOSTS = [10.0.*, 0.0.0.0]
+ALLOWED_HOSTS = ['10.0.*', '0.0.0.0']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
