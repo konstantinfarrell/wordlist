@@ -9,9 +9,9 @@ class Word(models.Model):
     """
     id = models.IntegerField(primary_key=True)
     word = models.CharField(max_length=255)
-    phonetic = models.IntegerField(unique=True)
-    part_of_speech = models.CharField(max_length=16)
-    language = models.CharField(max_length=2)
+    phonetic = models.CharField(max_length=255)
+    part_of_speech = models.CharField(max_length=64)
+    language = models.CharField(max_length=16)
     definition = models.CharField(max_length=255)
     attribution = models.CharField(max_length=255)
     notes = models.CharField(max_length=255)
