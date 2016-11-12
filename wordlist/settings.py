@@ -55,7 +55,7 @@ ROOT_URLCONF = 'wordlist.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [here("templates")],
+        'DIRS': [here("templates/")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
