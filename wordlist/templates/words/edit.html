@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block head %}
+    <title>Add or Edit</title>
+{% endblock %}
+{% block content %}
+<div>
+    <form action="{% if word_id %}{% url 'words-edit' word_id %}{% else %}{% url 'words-create' %}{% endif %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type='submit' value='Submit' class='btn btn-default' />
+    </form>
+</div>
+{% endblock %}
