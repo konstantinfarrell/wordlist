@@ -1,5 +1,7 @@
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.conf import settings
+from django.contrib import messages
 from django.core.urlresolvers import reverse
 from wordlist.words.models import Word
 from wordlist.words.forms import WordForm
@@ -48,4 +50,5 @@ def _edit(request, word_id):
 
     return render(request, "words/edit.html", {
         "form": form,
+        "word_id": word_id,
     })

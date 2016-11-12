@@ -7,7 +7,7 @@ class Word(models.Model):
     'phonetic' contains a list of integers to be used with IPA_table
     'language' uses 2-letter code
     """
-    id = models.IntegerField(primary_key=True)
+    id = models.AutoField(primary_key=True)
     word = models.CharField(max_length=255)
     phonetic = models.CharField(max_length=255)
     part_of_speech = models.CharField(max_length=64)

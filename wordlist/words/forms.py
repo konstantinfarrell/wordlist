@@ -35,7 +35,7 @@ class WordForm(forms.ModelForm):
         """
         return self.instance.pk is None
 
-    def save(self):
+    def save(self, *args, **kwargs):
         """
         """
         in_create_mode = self.in_create_mode()
