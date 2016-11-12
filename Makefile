@@ -19,6 +19,7 @@ clean:
 	find . -iname "__pycache__" -delete
 
 migrate:
+	$(VENV_DIR)/bin/$(PYTHON) manage.py makemigrations
 	$(VENV_DIR)/bin/$(PYTHON) manage.py migrate
 
 test:
