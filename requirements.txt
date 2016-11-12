@@ -1,0 +1,4 @@
+Django==1.10.3
+PyMySQL==0.7.9
+readline==6.2.4.1
+varlet==0.0.8
