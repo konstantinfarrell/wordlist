@@ -3,16 +3,17 @@
 
 <h1>Word List</h1>
 <table class="table table-striped">
-    <th>
-        <td>ID</td>
-        <td>Word</td>
-        <td>Phonetic</td>
-        <td>Part of Speech</td>
-        <td>Language</td>
-        <td>Definition</td>
-        <td>Attribution</td>
-        <td>Notes</td>
-    </th>
+    <tr>
+        <th></th>
+        <th>ID</th>
+        <th>Word</th>
+        <th>Phonetic</th>
+        <th>Part of Speech</th>
+        <th>Language</th>
+        <th>Definition</th>
+        <th>Attribution</th>
+        <th>Notes</th>
+    </tr>
     {% for word in words %}
         <tr>
             <td><a class="btn btn-warning btn-sm" href="{% url 'words-edit' word.pk %}"><span class="glyphicon glyphicon-pencil" /></a></td>
