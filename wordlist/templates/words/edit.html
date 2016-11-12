@@ -6,7 +6,7 @@
 <div>
     <form action="{% if word_id %}{% url 'words-edit' word_id %}{% else %}{% url 'words-create' %}{% endif %}" method="post">
         {% csrf_token %}
-        {{ form }}
+        {{ form.as_table }}
         <input type='submit' value='Submit' class='btn btn-default' />
     </form>
 </div>
