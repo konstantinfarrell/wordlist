@@ -18,6 +18,9 @@ clean:
 	find . -iname "*.pyo" -delete
 	find . -iname "__pycache__" -delete
 
+migrate:
+	$(VENV_DIR)/bin/$(PYTHON) manage.py migrate
+
 test:
 	clear
 	$(VENV_DIR)/bin/$(PYTHON) -m unittest discover
