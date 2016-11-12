@@ -1,3 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from django.conf import settings
+from django.core.urlresolvers import reverse
 
-# Create your views here.
+
+def home(request):
+
+    return render(request, 'words/home.html', {
+
+    })
