@@ -3,10 +3,11 @@
 {% block head %}
 {% endblock %}
 {% block content %}
+<h1>{% if word_id %}Modify{% else %}Submit{% endif %} a Word</h1>
 <div>
     <form action="{% if word_id %}{% url 'words-edit' word_id %}{% else %}{% url 'words-create' %}{% endif %}" method="post">
         {% csrf_token %}
-        {{ form.as_table }}
+        {{ form.as_p }}
         <input type='submit' value='Submit' class='btn btn-default' />
         <a href='{% url "home" %}' class='btn btn-warning'>Cancel</a>
     </form>
