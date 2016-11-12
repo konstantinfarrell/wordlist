@@ -1,6 +1,6 @@
 {% extends "base.html" %}
+{% block title %}{% if word_id %}Edit{% else %}Create{% endif %}{% endblock %}
 {% block head %}
-    <title>Add or Edit</title>
 {% endblock %}
 {% block content %}
 <div>
@@ -8,6 +8,7 @@
         {% csrf_token %}
         {{ form.as_table }}
         <input type='submit' value='Submit' class='btn btn-default' />
+        <a href='{% url "home" %}' class='btn btn-warning'>Cancel</a>
     </form>
 </div>
 {% endblock %}
