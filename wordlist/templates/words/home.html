@@ -26,6 +26,10 @@
             <td>{{ word.attribution}}</td>
             <td>{{ word.notes}}</td>
         </tr>
+    {% empty %}
+        <tr>
+            <td>No Entries</td>
+        </tr>
     {% endfor %}
 </table>
 {% endblock %}

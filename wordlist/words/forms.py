@@ -9,16 +9,17 @@ class WordForm(forms.ModelForm):
     """
     Form for creating and editing a word entry.
     """
+    phonetic = forms.CharField(required=False)
+    part_of_speech = forms.CharField(required=False)
+    language = forms.CharField(required=False)
+    definition = forms.CharField(required=False)
+    attribution = forms.CharField(required=False)
+    notes = forms.CharField(required=False)
+
     class Meta:
         model = Word
         fields = (
             'word',
-            'phonetic',
-            'part_of_speech',
-            'language',
-            'definition',
-            'attribution',
-            'notes'
         )
 
     def __init__(self, *args, **kwargs):

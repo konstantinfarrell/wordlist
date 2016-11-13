@@ -11,4 +11,5 @@ urlpatterns = [
     url(r'^$', words.home, name='home'),
     url(r'^new/', words.create, name='words-create'),
     url(r'^edit/(?P<word_id>\d+)/?$', words.edit, name='words-edit'),
+    url(r'^delete/(?P<word_id>\d+)/?$', words.delete, name='words-delete'),
 ]

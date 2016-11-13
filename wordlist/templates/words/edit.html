@@ -10,6 +10,7 @@
         {{ form.as_p }}
         <input type='submit' value='Submit' class='btn btn-default' />
         <a href='{% url "home" %}' class='btn btn-warning'>Cancel</a>
+        {% if word_id %}<a href='{% url "words-delete" word_id %}' class='btn btn-danger'>Delete</a>{% endif %}
     </form>
 </div>
 {% endblock %}
