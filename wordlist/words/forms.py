@@ -20,6 +20,12 @@ class WordForm(forms.ModelForm):
         model = Word
         fields = (
             'word',
+            'phonetic',
+            'part_of_speech',
+            'language',
+            'definition',
+            'attribution',
+            'notes',
         )
 
     def __init__(self, *args, **kwargs):
